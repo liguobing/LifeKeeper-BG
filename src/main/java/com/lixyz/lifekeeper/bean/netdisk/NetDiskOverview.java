@@ -4,6 +4,15 @@ public class NetDiskOverview {
     private int imageCount;
     private int recordCount;
     private int videoCount;
+    private int weChatRecordCount;
+
+    public int getWeChatRecordCount() {
+        return weChatRecordCount;
+    }
+
+    public void setWeChatRecordCount(int weChatRecordCount) {
+        this.weChatRecordCount = weChatRecordCount;
+    }
 
     public int getImageCount() {
         return imageCount;

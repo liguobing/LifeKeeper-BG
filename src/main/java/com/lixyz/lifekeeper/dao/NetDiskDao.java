@@ -38,4 +38,7 @@ public interface NetDiskDao {
 
     @Select("Select * from Videos where VideoUser=#{userId} and VideoStatus = 1")
     ArrayList<VideoBean> getVideos(@Param("userId") String userId) throws SQLException;
+
+    @Select("select count(ObjectId) from WeChatRecord where RecordUser = #{userId} and RecordStatus = 1")
+    int getWeChatRecordCount(String userId);
 }

@@ -20,10 +20,12 @@ public class NetDiskService {
             int imageCount = dao.getImageCount(userId);
             int recordCount = dao.getRecordCount(userId);
             int videoCount = dao.getVideoCount(userId);
+            int weChatRecordCount = dao.getWeChatRecordCount(userId);
             NetDiskOverview overview = new NetDiskOverview();
             overview.setImageCount(imageCount);
             overview.setRecordCount(recordCount);
             overview.setVideoCount(videoCount);
+            overview.setWeChatRecordCount(weChatRecordCount);
             return new Result(true, null, null, overview);
         } catch (SQLException e) {
             e.printStackTrace();
